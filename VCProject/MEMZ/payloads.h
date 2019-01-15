@@ -4,6 +4,8 @@
 #define PAYLOADHOST(name) DWORD (WINAPI name)(LPVOID parameter)
 
 typedef struct {
+	LPTHREAD_START_ROUTINE payloadHost;
+	LPVOID payloadFunction;
 	int startDelay;
 	int delaytime, delay, runtime, times;
 } PAYLOAD;
